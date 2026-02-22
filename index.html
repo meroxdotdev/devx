@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,67 +9,70 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Developero – Web Development &amp; Infrastructură IT" />
     <meta property="og:description" content="Expertiza Web &amp; Infrastructură IT pentru afacerea ta. Site-uri, magazine online, administrare servere, securitate și monitorizare." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
 
   <body>
-    <nav class="navigation">
+    <a href="#main" class="skip-link">Sari la conținut</a>
+
+    <header class="navigation" role="banner">
       <div class="container">
         <div class="logo">
-          <a href="#">
-            <svg width="215" height="40" viewBox="0 0 215 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 0C25.3043 4.00466e-07 30.3919 2.10669 34.1426 5.85742C34.8157 6.53058 35.4354 7.24719 36 8H20C16.8174 8 13.7651 9.26421 11.5146 11.5146C9.26421 13.7651 8 16.8174 8 20H20L36.9102 9.31934C38.1656 11.3074 39.0611 13.5027 39.5547 15.8027L32 20H40L39.9941 20.4971C39.8669 25.6213 37.776 30.5092 34.1426 34.1426C30.3919 37.8933 25.3043 40 20 40C14.6957 40 9.60815 37.8933 5.85742 34.1426C5.18426 33.4694 4.56459 32.7528 4 32H20C23.1826 32 26.2349 30.7358 28.4854 28.4854C30.5952 26.3755 31.8383 23.5608 31.9854 20.5947L32 20H20L3.08984 30.6787C1.83452 28.6906 0.941002 26.4951 0.447266 24.1953L8 20H0C8.00931e-07 14.6957 2.1067 9.60815 5.85742 5.85742C9.60815 2.1067 14.6957 -5.79361e-10 20 0Z" fill="#0094F7"></path>
-              <path d="M92.2744 30.4434C93.2144 32.2056 95.0286 33.3154 97.3672 33.3154C99.7055 33.3152 101.519 32.2055 102.459 30.4434H105.977C104.813 33.9648 101.583 36.3191 97.3672 36.3193C93.1509 36.3193 89.9205 33.9649 88.7568 30.4434H92.2744Z" fill="#003253"></path>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M143.503 11.7598C148.863 11.7598 152.618 15.4468 152.618 20.7383C152.618 26.3371 148.453 29.5127 144.049 29.5127C141.318 29.5126 138.997 28.2833 137.768 26.0986V36.2715H134.524V20.7725C134.524 15.2761 138.28 11.7598 143.503 11.7598ZM143.537 14.7637C140.089 14.7637 137.768 17.222 137.768 20.6357C137.768 24.0496 140.089 26.5078 143.537 26.5078C147.019 26.5078 149.341 24.0497 149.341 20.6357C149.341 17.2219 147.019 14.7637 143.537 14.7637Z" fill="#003253"></path>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M78.0586 11.7598C83.3842 11.7598 87.1395 15.515 87.1396 20.6357C87.1396 25.7566 83.3843 29.5127 78.0586 29.5127C72.7329 29.5127 68.9775 25.7566 68.9775 20.6357C68.9777 15.515 72.7329 11.7598 78.0586 11.7598ZM78.0586 14.7637C74.5765 14.7637 72.255 17.2219 72.2549 20.6357C72.2549 24.0497 74.5764 26.5078 78.0586 26.5078C81.5408 26.5078 83.8623 24.0497 83.8623 20.6357C83.8622 17.2219 81.5407 14.7637 78.0586 14.7637Z" fill="#003253"></path>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M97.7266 11.7676H106.548V14.668H104.273C105.651 16.2132 106.448 18.2793 106.448 20.6357C106.448 25.7565 102.693 29.5125 97.3672 29.5127C92.0415 29.5127 88.2861 25.7566 88.2861 20.6357C88.2863 15.515 92.0415 11.7598 97.3672 11.7598C97.4878 11.7598 97.6076 11.7637 97.7266 11.7676ZM97.3672 14.7637C93.8851 14.7637 91.5636 17.2219 91.5635 20.6357C91.5635 24.0497 93.885 26.5078 97.3672 26.5078C100.849 26.5076 103.17 24.0495 103.17 20.6357C103.17 17.2221 100.849 14.7639 97.3672 14.7637Z" fill="#003253"></path>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M116.675 11.7598C122 11.7598 125.756 15.515 125.756 20.6357C125.756 25.7566 122.001 29.5127 116.675 29.5127C111.349 29.5127 107.594 25.7566 107.594 20.6357C107.594 15.515 111.349 11.7598 116.675 11.7598ZM116.675 14.7637C113.193 14.7637 110.871 17.2219 110.871 20.6357C110.871 24.0497 113.193 26.5078 116.675 26.5078C120.157 26.5078 122.479 24.0497 122.479 20.6357C122.478 17.2219 120.157 14.7637 116.675 14.7637Z" fill="#003253"></path>
-              <path d="M160.816 11.7598C164.845 11.7599 167.337 14.0475 167.405 16.9492H164.195C164.093 15.652 162.899 14.6955 160.851 14.6953C158.7 14.6953 157.471 15.7203 157.471 17.0518C157.471 18.6559 159.246 18.8265 161.328 19.0996C164.264 19.4751 167.848 20.0215 167.849 23.8789C167.849 27.2927 165.084 29.5125 160.851 29.5127C156.617 29.5127 153.954 27.259 153.852 24.1865H157.129C157.197 25.5862 158.495 26.5762 160.851 26.5762C163.308 26.576 164.571 25.5179 164.571 24.1865C164.571 22.582 162.796 22.3766 160.68 22.1035C157.744 21.728 154.193 21.182 154.193 17.3242C154.193 14.0128 156.788 11.7598 160.816 11.7598Z" fill="#003253"></path>
-              <path d="M172.983 21.0107C172.983 24.6637 174.998 26.5078 178.07 26.5078C181.143 26.5078 183.157 24.6636 183.157 21.0107V12.2031H186.4V21.0107C186.4 26.6096 183.055 29.5117 178.07 29.5117C173.086 29.5117 169.74 26.6437 169.74 21.0107V12.2031H172.983V21.0107Z" fill="#003253"></path>
-              <path d="M55.4824 25.8594H68.0117V29.0684H52V6.74121H55.4824V25.8594Z" fill="#003253"></path>
-              <path d="M131.442 29.0684H128.199V12.2031H131.442V29.0684Z" fill="#003253"></path>
-              <path d="M207.76 11.7598C211.72 11.7598 214.725 14.1496 214.725 19.3047V29.0684H211.481V19.3047C211.481 16.1641 209.809 14.7638 207.453 14.7637C205.166 14.7637 203.458 16.2321 203.458 19.3047V29.0684H200.215V19.3047C200.215 16.2321 198.474 14.7637 196.187 14.7637C193.831 14.7638 192.158 16.164 192.158 19.3047V29.0684H188.915V19.3047C188.915 14.1496 191.92 11.7598 195.88 11.7598C198.474 11.7599 200.659 12.9207 201.819 15.1055C202.98 12.9206 205.131 11.7598 207.76 11.7598Z" fill="#003253"></path>
-              <path d="M129.804 5C131.101 5 132.057 5.95577 132.058 7.25293C132.058 8.55023 131.101 9.54102 129.804 9.54102C128.507 9.54088 127.551 8.55014 127.551 7.25293C127.551 5.95586 128.507 5.00013 129.804 5Z" fill="#003253"></path>
-              </svg>
+          <a href="#" aria-label="Developero – pagină principală">
+            <span class="logo-mark" aria-hidden="true">/></span><span class="logo-text">evelopero</span>
           </a>
         </div>
-        <div class="menu">
+        <nav class="menu" aria-label="Navigare principală">
           <a href="#servicii">Servicii</a>
           <a href="#avantaje">De ce noi</a>
           <a href="#proces">Cum lucrăm</a>
           <a href="#contact">Contact</a>
           <a href="#contact" class="btn-full">Cere o ofertă</a>
-          <!-- <button id="theme-toggle">☀️</button> -->
-        </div>
+        </nav>
+        <button type="button" class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-overlay" id="nav-toggle">
+          <span class="nav-toggle-icon-open" aria-hidden="true">☰</span>
+          <span class="nav-toggle-icon-close" aria-hidden="true">✕</span>
+        </button>
       </div>
-    </nav>
+    </header>
 
-    <section>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+      <nav class="menu" aria-label="Navigare mobilă">
+        <a href="#servicii">Servicii</a>
+        <a href="#avantaje">De ce noi</a>
+        <a href="#proces">Cum lucrăm</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn-full">Cere o ofertă</a>
+      </nav>
+    </div>
+
+    <main id="main">
+    <section class="section">
       <div class="container">
         <div class="hero">
           <div class="hero-supra">Web Development & IT Infrastructure</div>
           <h1 class="text-center">Expertiza <span class="glow-text">Web</span> &amp; <span class="glow-text">Infrastructură IT</span><br>pentru afacerea ta</h1>
           <p class="text-center">De la site-ul de prezentare până la infrastructura serverelor tale – construim, securizăm și monitorizăm tot.</p>
           <div class="action">
-            <a href="#" class="btn-full">Vezi serviciile</a>
-            <a href="#" class="btn-outline">Cere oferta</a>
+            <a href="#servicii" class="btn-full">Vezi serviciile</a>
+            <a href="#contact" class="btn-outline">Cere oferta</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section style="padding: 0;">
-      <div class="section-title">
-        <div class="section-wrapper">
-          <p class="text-center title-big">Serviciile noastre</h2>
-        </div>
+    <section class="section-title" aria-labelledby="section-servicii">
+      <div class="section-wrapper">
+        <h2 class="text-center title-big" id="section-servicii">Serviciile noastre</h2>
       </div>
     </section>
 
-    <section class="web-services">
+    <section class="section web-services" id="servicii">
       <div class="container web">
-        <h2 class="text-center">Serivicii Web</h2>
+        <h2 class="text-center">Servicii Web</h2>
         <div class="tab-wrapper">
           <div class="tab-header">
             <div class="tab-list-item active">Site de Prezentare</div>
@@ -80,101 +83,85 @@
             <div class="tab-panel-item active">
               <div class="grid grid-3">
                 <div class="grid-item tab-content">
+                  <p class="tab-tagline">Prezență online de încredere, fără bătăi de cap.</p>
                   <h3 class="tab-title"><span>Start</span><span>1.200€</span></h3>
                   <div class="tab-list">
-                    <p>Implementare completă a site-ului, cu design modern, pregătit să inspire încredere.</p>
-                    <p>Consultanță în achiziționarea de server și domeniu astfel încât să alegi cea mai bună variantă.</p>
-                    <p>Configurare SSL pentru securitate.</p>
-                    <p>Creare și configurare adrese de email.</p>
-                    <p>SEO inițial pentru vizibilitate în Google (MT, MD, Sitemap, ...).</p>
-                    <p>Ne asigurăm că ai toate paginile de politici conforme GDPR.</p>
-                    <p>Backup lunar pentru siguranța datelor.</p>
+                    <p><strong>Ce obții:</strong> site gata de folosit, design modern, vizibil în Google și conform cu GDPR.</p>
+                    <p>Consultanță domeniu &amp; hosting, SSL, email profesional, SEO de bază (meta, descrieri, sitemap), politici legale, backup lunar.</p>
                   </div>
-                  <a href="#" class="btn-full">Cere oferta</a>
+                  <a href="#contact" class="btn-full">Cere oferta</a>
                 </div>
                 <div class="grid-item tab-content highlight">
+                  <span class="tab-badge">Recomandat</span>
+                  <p class="tab-tagline">Pentru afaceri care vor trafic calificat și conversii măsurabile.</p>
                   <h3 class="tab-title"><span>Business</span><span>1.500€</span></h3>
                   <div class="tab-list">
-                    <p>Tot ce conține pachetul Esențial, plus:</p>
-                    <p>Protecție avansată împotriva atacurilor (WAF).</p>
-                    <p>SEO avansat pentru a putea urmări conversiile (GTM Pixel, Facebook Pixel, Google Ads, ...).</p>
-                    <p>Integrare cu platforme de Newsletter.</p>
-                    <p>BONUS: 1 lună mentenanță gratuită.</p>
+                    <p><strong>Tot ce e la Start</strong>, plus: protecție WAF, tracking conversii (Google Ads, Facebook, GTM), newsletter integrat.</p>
+                    <p><strong>Bonus:</strong> 1 lună mentenanță inclusă.</p>
                   </div>
-                  <a href="#" class="btn-full">Cere oferta</a>
+                  <a href="#contact" class="btn-full">Cere oferta</a>
                 </div>
                 <div class="grid-item tab-content">
+                  <p class="tab-tagline">Performanță și suport de nivel enterprise, fără compromisuri.</p>
                   <h3 class="tab-title"><span>Pro</span><span>1.800€</span></h3>
                   <div class="tab-list">
-                    <p>Tot ce conține pachetul Profesional, plus:</p>
-                    <p>Live AI Chat.</p>
-                    <p>Viteză superioară prin Cloudflare (Cache, CDN, ...).</p>
-                    <p>Monitorizare uptime 24/7 pentru a ști la orice oră starea site-ului.</p>
-                    <p>BONUS: 2 luni mentenanță gratuită.</p>
+                    <p><strong>Tot ce e la Business</strong>, plus: Live AI Chat, CDN &amp; cache (Cloudflare), monitorizare uptime 24/7.</p>
+                    <p><strong>Bonus:</strong> 2 luni mentenanță incluse.</p>
                   </div>
-                  <a href="#" class="btn-full">Cere oferta</a>
+                  <a href="#contact" class="btn-full">Cere oferta</a>
                 </div>
               </div>
             </div>            
             <div class="tab-panel-item">
               <div class="grid grid-3">
                 <div class="grid-item tab-content">
+                  <p class="tab-tagline">Magazin online funcțional: plăți, transport, facturare, de la zero.</p>
                   <h3 class="tab-title"><span>Launch</span><span>2.500€</span></h3>
                   <div class="tab-list">
-                    <p>Consultanță în alegerea platformei optime pentru magazinul tău online (WordPress sau Shopify).</p>
-                    <p>Configurare procesator de plată online.</p>
-                    <p>Configurare metodă de transport prin curier.</p>
-                    <p>Configurare metodă de facturare.</p>
-                    <p>SEO inițial pentru vizibilitate în Google (MT, MD, Sitemap, ...).</p>
-                    <p>Ne asigurăm că ai toate paginile de politici conforme GDPR.</p>
-                    <p>Import produse (până la 25 de produse gratuite).</p>
+                    <p><strong>Ce obții:</strong> magazin gata de vânzări (WordPress sau Shopify), plată online, curier, facturare, SEO de bază, GDPR, import până la 25 produse.</p>
                   </div>
-                  <a href="#" class="btn-full">Cere oferta</a>
+                  <a href="#contact" class="btn-full">Cere oferta</a>
                 </div>
                 <div class="grid-item tab-content highlight">
+                  <span class="tab-badge">Recomandat</span>
+                  <p class="tab-tagline">Pentru creștere: măsori conversiile, recapturezi clienții, te protejezi.</p>
                   <h3 class="tab-title"><span>Grow</span><span>2.800€</span></h3>
                   <div class="tab-list">
-                    <p>Tot ce conține pachetul Grow, plus:</p>
-                    <p>SEO avansat pentru a putea urmări conversiile (GTM Pixel, Facebook Pixel, Google Ads, ...).</p>
-                    <p>Configurare favorite.</p>
-                    <p>Protecție avansată împotriva atacurilor (WAF).</p>
-                    <p>Integrare cu platforme de Newsletter.</p>
-                    <p>Backup lunar pentru siguranța datelor.</p>
-                    <p>Import produse (până la 50 de produse gratuite).</p>
-                    <p>BONUS: 1 lună mentenanță gratuită.</p>
+                    <p><strong>Tot ce e la Launch</strong>, plus: tracking conversii (Ads, Facebook, GTM), favorite, WAF, newsletter, backup lunar, import până la 50 produse.</p>
+                    <p><strong>Bonus:</strong> 1 lună mentenanță inclusă.</p>
                   </div>
-                  <a href="#" class="btn-full">Cere oferta</a>
+                  <a href="#contact" class="btn-full">Cere oferta</a>
                 </div>
                 <div class="grid-item tab-content">
+                  <p class="tab-tagline">Viteză maximă, recuperare coșuri abandonate, monitorizare non-stop.</p>
                   <h3 class="tab-title"><span>Scale</span><span>3.200€</span></h3>
                   <div class="tab-list">
-                    <p>Configurare chatbot sau Live AI Chat.</p>
-                    <p>Viteză superioară prin Cloudflare (Cache, CDN, ...).</p>
-                    <p>Configurare Abandoned Cart pentru a notifica clienții care nu au finalizat achiziția.</p>
-                    <p>Monitorizare uptime 24/7 pentru a ști la orice oră starea magazinului tău online.</p>
-                    <p>Import produse (până la 100 de produse gratuite).</p>
-                    <p>BONUS: 2 luni mentenanță gratuită.</p>
+                    <p><strong>Tot ce e la Grow</strong>, plus: chatbot / Live AI Chat, CDN (Cloudflare), Abandoned Cart, uptime 24/7, import până la 100 produse.</p>
+                    <p><strong>Bonus:</strong> 2 luni mentenanță incluse.</p>
                   </div>
-                  <a href="#" class="btn-full">Cere oferta</a>
+                  <a href="#contact" class="btn-full">Cere oferta</a>
                 </div>
               </div>
             </div>            
             <div class="tab-panel-item">
               <div class="grid grid-3">
                 <div class="grid-item tab-content">
+                  <p class="tab-tagline">Știi exact ce îmbunătățești și în ce ordine.</p>
                   <h3 class="tab-title">Audit extern</h3>
-                  <p>Analiză completă a website-ului tău din perspectivă funcțională, tehnică și vizuală. Identificăm problemele care afectează performanța, viteza sau experiența utilizatorului și oferim recomandări clare pentru optimizare și creștere.</p>
-                  <a href="#" class="btn-full">Cere oferta</a>
+                  <p>Raport clar: funcționalitate, tehnic, UX. Identificăm ce te frânează (viteză, conversii, securitate) și îți dăm un plan de acțiune priorizat, fără jargon.</p>
+                  <a href="#contact" class="btn-full">Cere oferta</a>
                 </div>
                 <div class="grid-item tab-content">
+                  <p class="tab-tagline">O pagină care convertește, pentru campanii și oferte.</p>
                   <h3 class="tab-title">Landing Page</h3>
-                  <p>Crearea de pagini dedicate pentru campanii de marketing, produse prmoționale sau servicii premium. Structură oriectată cătrel call-to-action, design modern și elemente optimizate pentru a atrage vizitatorii.</p>
-                  <a href="#" class="btn-full">Cere oferta</a>
+                  <p>Pagină dedicată unei oferte, produs sau serviciu: design orientat pe un singur CTA, mesaj clar, optimizat pentru trafic plătit și organic.</p>
+                  <a href="#contact" class="btn-full">Cere oferta</a>
                 </div>
                 <div class="grid-item tab-content">
+                  <p class="tab-tagline">Site-ul tău mereu la zi, fără să te ocupi tu.</p>
                   <h3 class="tab-title">Mentenanță lunară</h3>
-                  <p>Administrare continuă a website-ului sau magazinului tău online prin actualizări periodice, backup-uri regulate și modificări la cerere, astfel încât site-ul sau magazinul tău să rămână funcțional și mereu pregătit să genereze vânzări.</p>
-                  <a href="#" class="btn-full">Cere oferta</a>
+                  <p>Actualizări, backup-uri și modificări la cerere. Rămâi funcțional, securizat și gata să generezi vânzări, luna de lună.</p>
+                  <a href="#contact" class="btn-full">Cere oferta</a>
                 </div>
               </div>
             </div>
@@ -184,7 +171,7 @@
       </div>
     </section>
 
-    <section class="infrastructure">
+    <section class="section infrastructure">
       <div class="container">
         <h2 class="text-center">Infrastructură</h2>
         <div class="grid grid-3">
@@ -276,7 +263,7 @@
       </div>
     </section>
 
-    <section class="outsourcing">
+    <section class="section outsourcing">
       <div class="container">
         <h2 class="text-center">Externalizare servicii IT</h2>
         <p class="text-center">Parteneriat IT flexibil pentru companii: suport tehnic, administrare infrastructură și proiecte la cerere. Fără angajamente pe termen lung — adaptăm serviciile la nevoile tale.</p>
@@ -287,15 +274,13 @@
       </div>
     </section>
 
-    <section style="padding: 0;">
-      <div class="section-title">
-        <div class="section-wrapper">
-          <p class="text-center title-big">Cum lucrăm</h2>
-        </div>
+    <section class="section-title" aria-labelledby="section-proces">
+      <div class="section-wrapper">
+        <h2 class="text-center title-big" id="section-proces">Cum lucrăm</h2>
       </div>
     </section>
 
-    <section class="how-we-work">
+    <section class="section how-we-work" id="proces">
       <div class="container">
         <h2 class="text-center">De la cerere la livrare, în pași simpli și transparenți</h2>
         <p class="text-center description">Ne dorim ca procesul să fie clar, eficient și lipsit de complicații. De la prima discuție până la implementare și suport, te ghidăm pas cu pas, astfel încât să ai control și vizibilitate în fiecare etapă.</p>
@@ -322,15 +307,13 @@
       </div>
     </section>
 
-    <section style="padding: 0;">
-      <div class="section-title">
-        <div class="section-wrapper">
-          <p class="text-center title-big">Despre Developero</h2>
-        </div>
+    <section class="section-title" aria-labelledby="section-despre">
+      <div class="section-wrapper">
+        <h2 class="text-center title-big" id="section-despre">Despre Developero</h2>
       </div>
     </section>
 
-    <section>
+    <section class="section" id="avantaje">
       <div class="about">
         <div class="about-content">
           <h3>Partenerul tău IT de încredere</h3>
@@ -349,5 +332,44 @@
       </div>
     </section>
 
+    <footer class="site-footer" id="contact" role="contentinfo">
+      <div class="footer-inner container">
+        <div class="footer-brand">
+          <div class="logo">
+            <a href="#" aria-label="Developero – pagină principală">
+              <span class="logo-mark" aria-hidden="true">/></span><span class="logo-text">evelopero</span>
+            </a>
+          </div>
+          <p>Expertiză Web &amp; Infrastructură IT pentru afacerea ta. Construim, securizăm și monitorizăm soluțiile tale digitale.</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigare</h4>
+          <ul>
+            <li><a href="#servicii">Servicii</a></li>
+            <li><a href="#avantaje">De ce noi</a></li>
+            <li><a href="#proces">Cum lucrăm</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@developero.ro">contact@developero.ro</a></li>
+            <li><a href="#contact">Cere o ofertă</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <div class="footer-legal">
+          <a href="#">Politica de confidențialitate</a>
+          <a href="#">Termeni și condiții</a>
+          <a href="#">Cookie policy</a>
+        </div>
+        <p class="footer-copyright">© <span id="footer-year">2026</span> <span class="logo-inline"><span class="logo-mark">/></span><span class="logo-text">evelopero</span></span>. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+    </main>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
