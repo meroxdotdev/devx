@@ -111,6 +111,10 @@ a:hover {
   background-color: var(--color-primary);
 }
 
+main > .section:first-of-type {
+  padding-top: calc(var(--nav-height) + var(--space-4xl));
+}
+
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -425,13 +429,13 @@ a:hover {
 /* ===== Section titles (full-height headline) ===== */
 .section-title {
   min-height: 100dvh;
-  padding: var(--space-xl);
+  padding: var(--space-2xl) var(--space-xl);
   background-color: var(--color-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .section-title .title-big {
@@ -440,10 +444,13 @@ a:hover {
   color: var(--color-secondary);
   letter-spacing: clamp(0.02em, 2vw, 0.08em);
   line-height: var(--line-height-tight);
+  text-align: center;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .section-title .section-wrapper {
-  opacity: 0;
+  opacity: 1;
 }
 
 /* ===== Web services & tabs ===== */
@@ -508,9 +515,11 @@ a:hover {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-xl);
-  padding-bottom: 5rem;
+  padding-bottom: 5.5rem;
+  min-height: 280px;
   color: var(--color-muted);
   transition: border-color var(--transition-base);
+  overflow: visible;
 }
 
 .tab-content:hover {
@@ -519,6 +528,7 @@ a:hover {
 
 .tab-content.highlight {
   border-color: var(--color-secondary);
+  padding-top: 2.75rem;
 }
 
 .tab-tagline {
@@ -562,6 +572,12 @@ a:hover {
 
 .tab-content .tab-list p {
   font-size: var(--text-sm);
+}
+
+.tab-content .tab-title,
+.tab-content .tab-tagline,
+.tab-content .tab-list {
+  overflow: visible;
 }
 
 .tab-content .btn-full {
@@ -673,7 +689,6 @@ a:hover {
   padding: var(--space-2xl);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  opacity: 0;
   transition: border-color var(--transition-base);
 }
 
@@ -716,12 +731,15 @@ a:hover {
   max-width: 95%;
   margin-inline: auto;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  padding: 0;
 }
 
 @media (min-width: 768px) {
   .about {
     max-width: 70%;
     clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%, 0 60px);
+    padding-inline-start: 60px;
+    padding-block-start: 60px;
   }
 }
 
@@ -729,6 +747,8 @@ a:hover {
   .about {
     max-width: 50%;
     clip-path: polygon(80px 0, 100% 0, 100% 100%, 0 100%, 0 80px);
+    padding-inline-start: 80px;
+    padding-block-start: 80px;
   }
 }
 
@@ -755,10 +775,13 @@ a:hover {
 .about-content {
   max-height: 80dvh;
   overflow-y: auto;
+  overflow-x: visible;
   padding: var(--space-2xl) var(--space-xl);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   scrollbar-gutter: stable;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: 768px) {
@@ -918,8 +941,21 @@ a:hover {
 .how-we-work-scroll-track .how-we-work {
   position: sticky;
   top: 0;
-  height: 100dvh;
-  overflow: hidden;
+  min-height: 100dvh;
+  height: auto;
+  overflow: visible;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 767px) {
+  .how-we-work-scroll-track {
+    height: auto !important;
+  }
+
+  .how-we-work-scroll-track .how-we-work {
+    position: relative;
+    min-height: 0;
+    height: auto;
+  }
 }

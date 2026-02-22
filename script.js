@@ -95,12 +95,6 @@
 
       howSection.parentNode.insertBefore(scrollTrack, howSection);
       scrollTrack.appendChild(howSection);
-
-      workItems.forEach((item) => {
-        item.style.opacity = "0";
-        item.style.transform = "translateY(24px)";
-        item.style.willChange = "opacity, transform";
-      });
     }
 
     function onScroll() {
@@ -109,8 +103,7 @@
       sectionWrappers.forEach((el) => {
         const rect = el.getBoundingClientRect();
         const visible = 1 - rect.top / windowHeight;
-        const opacity = Math.min(Math.max(visible / SCROLL_OPACITY_THRESHOLD, 0), 1);
-        el.style.opacity = String(opacity);
+        el.style.opacity = "1";
 
         let translateY = 0;
         if (visible > SCROLL_TRANSLATE_START) {
@@ -132,15 +125,16 @@
         const scrollTrack = howSection.parentElement;
         const trackRect = scrollTrack.getBoundingClientRect();
         const trackScrolled = -trackRect.top;
-        const scrollZone = scrollTrack.offsetHeight - windowHeight;
+        const scrollZone = Math.max(1, scrollTrack.offsetHeight - windowHeight);
         const totalProgress = Math.max(0, Math.min(1, trackScrolled / scrollZone));
 
         workItems.forEach((item, i) => {
           const start = i / workItems.length;
           const end = (i + 1) / workItems.length;
           const localProgress = Math.max(0, Math.min(1, (totalProgress - start) / (end - start)));
-          item.style.opacity = String(localProgress);
-          item.style.transform = `translateY(${(1 - localProgress) * 24}px)`;
+          const translateY = (1 - localProgress) * 16;
+          item.style.opacity = "1";
+          item.style.transform = `translateY(${translateY}px)`;
         });
       }
     }
